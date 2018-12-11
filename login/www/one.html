@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆注册</title>
+	<style type="text/css">
+		.box{
+			width: 400px;
+			height: 250px;
+			border: 2px solid green;
+			position: absolute;
+			left: 50%;
+			top:50%;
+			transform:translate(-50%, -50%);
+			box-shadow: 2px 2px 5px green;
+			text-align: center;
+			font-size: 20px;
+			padding-top: 40px;
+			box-sizing:border-box;
+		}
+		.user input,.pass input{
+			margin-top: 20px;
+		}
+		#deng,#zhu{
+            width:44px;
+            height:29px;
+            font-size:18px;
+            margin:25px 45px;
+            text-align: center;
+            font-size: 15px;
+            margin-top: 30px;
+            box-sizing:border-box;
+		}     
+		.worry{
+			color: red;
+			position: absolute;
+			margin-top: -26px;
+			right:65px;
+		}     
+		.ok{
+			color: green;
+			position: absolute;
+			margin-top: -26px;
+			right:60px;
+		}        
+	</style>
+</head>
+<body>
+	<div class="box" style="border-color:green;box-shadow:2px 2px 5px green;">
+		<div class="user">
+		   <span>账号：</span> 
+		   <input  type="text" name="user" value="" id="user_"> <span class="worry" style="display: none;">!</span>
+		   <span class="ok" style="display: none;">&#8730;</span>
+		</div>
+		
+        <div class="pass">
+           <span>密码：</span><span></span>
+		   <input type="password" name="password" value="" id="pass_"> <span class="worry" style="display: none;">!</span>
+		   <span class="ok" style="display: none;">&#8730;</span>
+        </div>
+		
+        <div>
+        	<input type="button" name="deng" value="登陆" id="deng">
+		    <input type="button" name="zhu" value="注册" id="zhu">
+        </div>
+	</div>
+	<script type="text/javascript">
+		var deng=document.getElementById('deng');
+		var zhu=document.getElementById('zhu');
+		var user_=document.getElementById('user_');
+		var pass_=document.getElementById('pass_');
+		var worry=document.getElementsByClassName('worry');
+		var ok=document.getElementsByClassName('ok');
+        var box=document.getElementsByClassName('box')[0];
+
+		var username=user_.value;
+		var passname=pass_.value;
+        var now;
+
+function chuan(){
+	    xhr=new XMLHttpRequest();
+		xhr.open('get','one'+"?"+'names='+username+'&'+'pass='+passname+'&'+'now='+now,true); //浏览器向服务器发送请求
+		xhr.send();
+
+		xhr.onreadystatechange=function(){
+        	if(xhr.readyState==4){
+              if (xhr.status >= 200 && xhr.status < 300) {
+                  alert(xhr.responseText);
+                  var obj=JSON.parse(xhr.responseText)
+                  if(obj.ok==true)
+                  {
+                  	box.style.borderColor='orange';
+                    box.style.boxShadow='2px 2px 5px orange';
+                  }
+                  else{
+                  	box.style.borderColor='green';
+                    box.style.boxShadow='2px 2px 5px green';
+                  }
+               } else {
+                 console.log(xhr.status);
+               }
+        	}
+        }
+}
+
+
+deng.addEventListener('click',function(){
+			 username=user_.value;
+		     passname=pass_.value;
+             var go=1;
+             box.style.borderColor='green';
+             box.style.boxShadow='2px 2px 5px green';
+			if(username=="")
+			{
+				worry[0].style.display='block';
+				ok[0].style.display='none';
+				go=0;
+			}
+            else
+            {
+            	
+        	    var reg=/^[0-9a-zA-Z_]*$/g;  //s正则匹配
+                var i = reg.test(username);
+                if(i==true)
+                {
+            	ok[0].style.display='block';
+            	worry[0].style.display='none';
+                }
+                else{
+                ok[0].style.display='none';
+            	worry[0].style.display='block';	
+            	go=0;
+            	alert('用户名格式错误 (应为 数字或字母 _)');
+                }
+            
+            }
+            	
+            if(passname=="")
+            {
+            	worry[1].style.display='block';
+            	ok[1].style.display='none';
+            	go=0
+            }
+            
+            else{
+        	    var reg=/^[0-9a-zA-Z]*$/g;  //s正则匹配
+                var i = reg.test(passname);
+                if(i==true)
+                {
+            	ok[1].style.display='block';
+            	worry[1].style.display='none';
+                }
+                else{
+                ok[1].style.display='none';
+            	worry[1].style.display='block';	
+            	go=0;
+            	alert('密码格式错误 (应为4~12位数字或字母)');
+                }
+            }
+
+            now='deng';  //定义传输数据的类型
+            if(go)
+            chuan();
+},false);
+
+zhu.addEventListener('click',function(){
+			 username=user_.value;
+		     passname=pass_.value;
+             var go=1;
+             box.style.borderColor='green';
+             box.style.boxShadow='2px 2px 5px green';
+			if(username=="")
+			{
+				worry[0].style.display='block';
+				ok[0].style.display='none';
+				go=0;
+			}
+            else
+            {
+            	var reg=/^[0-9a-zA-Z_]*$/g;  //s正则匹配
+                var i = reg.test(username);
+                if(i==true)
+                {
+            	ok[0].style.display='block';
+            	worry[0].style.display='none';
+                }
+                else{
+                ok[0].style.display='none';
+            	worry[0].style.display='block';	
+            	go=0;
+            	alert('用户名格式错误 (应为 数字或字母 _)');
+                }
+            	
+            }
+            	
+            if(passname=="")
+            {
+            	worry[1].style.display='block';
+            	ok[1].style.display='none';
+            	go=0;
+            }
+            
+            else{
+        	    var reg=/^[0-9a-zA-Z]*$/g;  //正则匹配
+                var i = reg.test(passname);
+                
+                console.log("jieguos",i,passname);
+                if(i==true)
+                {
+            	ok[1].style.display='block';
+            	worry[1].style.display='none';
+                }
+                else{
+                ok[1].style.display='none';
+            	worry[1].style.display='block';	
+            	go=0;
+            	alert('注意：密码为4-12位数字或英文字母');
+                }
+            }
+
+            now='zhu';  //定义传输数据的类型
+            if(go)
+            chuan();
+},false);
+		
+	</script>
+</body>
+</html>
