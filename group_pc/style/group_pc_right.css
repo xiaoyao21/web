@@ -27,7 +27,59 @@
         width:70rem;
         height:30rem;
         background-color:white;
+        text-align:center;
     }
+    .quanti,.zunei{
+    	width:30.5rem;
+    	height:22rem;
+    	display:inline-block;
+    	text-align:center;
+    	font-weight:700;
+    	white-space:normal;
+        word-break:break-all;
+        word-wrap:break-word; 
+        margin-top:2rem;
+        padding:2rem;
+    }
+    .zunei span,.quanti span{
+    	font-size:2.5rem!important;
+    	opacity:.7;
+    	cursor:pointer;
+    	transition:.5s;
+    }
+    .zunei span:hover,.quanti span:hover{
+    	font-size:2.5rem!important;
+    	opacity:1;
+    }
+    .quanti p,.zunei p{
+    	font-size:1rem;
+    	margin-top:1rem;
+    }
+    .quanti{
+    	float:left;
+    	border-left:.15rem solid #f1f1ef;
+    }
+    .zunei{
+    	float:left;
+    	border-right:.15rem solid #f1f1ef;
+    }
+    .tellcontent{
+    	text-align:left;
+    	font-size:1.3rem!important;
+    	font-weight:400;
+    }
+
+	.tellgong{
+		margin-top:3rem;
+		margin-left:3rem;
+	}
+	.tellbutton{
+		position:relative;
+		width:4rem;
+		height:2rem;
+		background-color:transparent;
+	}
+
     /*page-2--------------------------------------------------------------*/
     #page-2{
         position: absolute;
@@ -72,28 +124,25 @@
     }
     .studentstates div{
         display:inline-block;
-        display:inline-block;
-        padding:.3rem .7rem .3rem .7rem;
+        padding:.3rem 1rem .3rem .7rem;
+        box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.24), 4px 4px 4px 0 rgba(0,0,0,0.19);
         color:white;
         border-radius: 1.2rem;
-        margin-bottom:.5rem;
-        cursor:pointer;
+        margin-bottom:2rem;
+        opacity:.7;
     }
-    .studentstates div:active{
-        box-shadow: 4px 12px 15px 0 rgba(0,0,0,0.24), 4px 17px 17px 0 rgba(0,0,0,0.19);
-        box-sizing: border-box;
-    }
-    #studentstate-1{
+  
+    #studentstate-0{
         background-color:#7b5cac;
     }
-    #studentstate-2{
+    #studentstate-1{
         background-color:#ff9103;
+    }
+    #studentstate-2{
+        background-color:#00d037;
     }
     #studentstate-3{
         background-color:#f70004;
-    }
-    #studentstate-4{
-        background-color:#00d037;
     }
     #requrie_new img{
         width:1.3rem;
@@ -108,8 +157,31 @@
     }
     .page2find-1{
        position:absolute;
-       top:0rem;
-       left:26rem;
+       top:3rem;
+       left:0rem;
+    }
+    .yeshu{
+    	position:absolute;
+    	left:40%;
+    }
+    .yeshu li{
+    	width:2.5rem;
+    	height:2.5rem;
+    	border-radius:50%;
+    	background-color:rgb(50,50,50);
+    	opacity:.6;
+    	cursor:pointer;
+    	text-align:center;
+    	line-height:2.5rem;
+    	font-size:1.3rem;
+    	float:left;
+    	margin-left:1rem;
+    	margin-top:1rem;
+    	transition:.5s;
+    	color:white;
+    }
+    .yeshu li:hover{
+    	opacity:.9;
     }
     /*page-3--------------------------------------------------------------*/
     .find-student form{
@@ -163,7 +235,7 @@
         transform:translate(-50%,-50%);
         margin:1rem;
     }
-    .student_sore_more div{
+    .student_face{
         line-height:2rem;
         width:45rem;
         height:30rem;
@@ -264,9 +336,54 @@
         transition:1s;
         position:absolute;
     }
+    .student_sore_more{
+    	overflow-y:auto;
+    	overflow-x:auto; 
+    	width:600px;
+    	height:400px;
+    	z-index:2;
+    }
+    .paistate{
+    	color:grey!important;
+    	font-weight:500!important;
+    }
+    .paidian{
+    	position:absolute;
+    	left:40%;
+    }
+    .paidian li{
+    	width:2.5rem;
+    	height:2.5rem;
+    	border-radius:50%;
+    	background-color:rgb(50,50,50);
+    	opacity:.6;
+    	cursor:pointer;
+    	text-align:center;
+    	line-height:2.5rem;
+    	font-size:1.3rem;
+    	float:left;
+    	margin-left:1rem;
+    	margin-top:1rem;
+    	transition:.5s;
+    	color:white;
+    }
+    .paidian li:hover{
+    	opacity:.9;
+    }
+    .student_sore_more::-webkit-scrollbar{  /*隐藏滚动条但仍具有滚动的效果*/
+	display: none;
+}
     /*--page-4-------------------------------------------------------------------*/
-
- .middle{
+.xinxi{
+	text-align:center;
+	color:white;
+}
+.lasttime{
+	margin-top:1rem;
+	text-align:center;
+	color:white;
+}
+.middle{
     position:absolute;
     top:4.5rem;
     left:50%;
@@ -343,7 +460,7 @@
 	height:40rem;
 	margin-top:7rem;
 	margin-left:27rem;
-	
+	overflow:hidden;
 }
 .page4_tell{
 	width:13rem;
@@ -352,18 +469,19 @@
 	background-color:#004b9f;
 	border-radius:50%;
 	padding:1rem;
-	left:65rem;
-	top:-6.5rem;
+	left:50rem;
+	top:-1.3rem;
 	opacity:.55;
 	color:white;
 	display:none;
+	transform:rotate(13deg);
 }
 .page4_tell_{
 	position:absolute;
-	left:3rem;
-	top:7.9rem;
+	left:14.8rem;
+	top:4.0rem;
 	color:#004b9f;
-	transform:rotate(-70deg);
+	transform:rotate(190deg);
 }
 .interview_div_{
 	overflow:hidden;
@@ -383,7 +501,7 @@
 
 }
 .page4_star{
-	font-size:3rem;
+	font-size:2.5rem;
 	color:#004b9f;
 	font-weight:900;
 	text-align:center;
@@ -404,7 +522,7 @@
 }
 .page_4_left{
 	width:35rem;
-	margin-top:6rem;
+	margin-top:2rem;
 	margin-left:3rem;
 	position:absolute;
 	z-index:9;
@@ -457,4 +575,7 @@
 	width:4rem;
 	height:2rem;
 	background-color:transparent;
+}
+.yimian,.ermian{
+	display:none;
 }
