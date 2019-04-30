@@ -1,0 +1,98 @@
+.danmore{
+	width: 1722px;
+	height: 908px;
+	position: absolute;
+	top: 137px;
+	left:158px;
+	background-color: #D1D4DB;
+	background: #FFFFFF;
+	box-shadow: 0 2px 48px 0 rgba(176,192,237,0.42);
+	border-radius: 12px;
+}
+
+.allorder{
+	margin-top: 18px;
+	margin-left: 158px;
+}
+
+.all_ding{
+	font-size: 20px;
+	color: #222222;
+	display: inline-block;
+}
+.all_xiang{
+	font-size: 20px;
+	color: #1CB906;
+	display: inline-block;
+}
+.detail_left{
+	width: 486px;
+	height: 374px;
+	border: 1px solid #F1F1F1;
+	margin: 48px;
+}
+.left_top{
+	height: 48px;
+	background: #F1F1F1;
+}
+.left_top p{
+	font-size: 18px;
+	color: #222222;
+	line-height:48px;
+	margin-left: 32px;
+}
+.left_{
+	position: absolute;
+	right: 91%;
+	color: #666666;
+}
+.right_{
+	position: absolute;
+	left: 9%;
+}
+
+.block{
+	position: absolute;
+	top: 50px;
+	left: 547px;
+}
+.creat_time{
+
+}
+.block_top{
+	font-size: 18px;
+	color: #666666;
+	height: 48px;
+	line-height: 48px;
+}
+.block_top div{
+	display: inline-block;
+}
+.creat_time{
+	margin-left: 20px;
+	display: inline-block;
+}
+.pac_time {
+    margin-left: 0px;
+}
+.pac_num{
+	margin-left: 536px;
+}
+.pac_status{
+	margin-left: 127px;
+}
+.pac_time{
+	color: #666666;
+}
+.all_ding{
+	cursor: pointer;
+}
+.all_ding:hover{
+	color: #1CB906;
+}
+#pac_num{
+	margin-left: 380px;
+}
+#pac_status{
+	margin-left: 192px;
+}
