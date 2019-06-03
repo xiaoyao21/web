@@ -45,19 +45,32 @@
             "user":user.value,
             "password":password.value
         }
-		Ajax({
-		    url:"...",
-		    type:'post',
-			data:tell,
-		    async:true,
-		    success:function(responseText){
-		        var obj = JSON.parse(responseText);
-		        console.log(obj);
-				
-		    },
-		    fail:function(err){
-		       console.log(err);
-		    }
-		});
+		
+		if(tell.user == 'admin'&&tell.password =='123456')
+			window.location.href="../html/index-1.html";
+		else if(tell.user!='admin'){
+				alert('用户名输入错误！')
+		}
+		else if(tell.password!='123456'){
+			
+			alert('密码输入错误！')
+		}
+// 		Ajax({
+// 		    url:"http://192.168.3.20:8080/superman",
+// 		    type:'post',
+// 			data:tell,
+// 		    async:true,
+// 		    success:function(responseText){
+// 		        var obj = JSON.parse(responseText);
+// 		        console.log(obj);
+// 				
+// 		    },
+// 		    fail:function(err){
+// 		       console.log(err);
+// 		    }
+// 		});
+		
+        
+
     }
 //}

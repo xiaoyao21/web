@@ -16,7 +16,7 @@ but_all[6].addEventListener('click',function(){but_left(a=1)},false)
 
 function json_p(num){
 	var script=document.createElement("script");
-	script.src= "...";
+	script.src= "http://120.79.141.139/MTmarket/orderApi/bought/"+num+"/"+rows+"?callback=handle";
 	document.getElementsByTagName("head")[0].appendChild(script);
 	
 }

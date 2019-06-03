@@ -1,5 +1,5 @@
 Ajax({
-    url: "...", //请求地址
+    url: "http://120.79.141.139/MTmarket/releasenotice", //请求地址
     type: 'get', //请求方式
     // data: tell,
     async: true, //true是否异步
@@ -8,6 +8,7 @@ Ajax({
         // //console.log(responseText);
         // if(obj.style==-200){
             
+        //     window.location.href="http://132.232.169.227:8858/login_pc.html"
         // }else if (obj.style == 0)
         //     alert(obj.msg);
         // else {
