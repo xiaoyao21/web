@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+	<script src="../js/yao.js"></script>
+  <!--  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script> -->
+    
+    <!-- <script src="../js/yao.js"></script> -->
+    
+</head>
+<body>
+    <div class="main">
+            <div class="bg">邻里鲜生后台管理系统</div>
+            <div class="flower">
+                <img src="../psc/蔬菜.png" width="61.6%" height="71.9%">
+            </div>
+            <div class="register">
+                <p align = "center">账号登陆</p>
+                <form action="" enctype="application/x-www-form-urlencoded">
+                    <center><input type="text" id = "user" placeholder="请输入账号" class="Input" autocomplete="off"></center>
+                    <p id="usererror" class="error">账号错误，333请输入正确的账号</p>
+                    <center><input type="password" id = "pass" placeholder="请输入密码" class = "Input" autocomplete="off"></center>
+                    <p id="passerror" class="error">密码错误，请输入正确的密码</p>
+                    <div class="check"  id="checkimg">
+						<img src="../pic/未勾选.png" id = "wgxcheckimg" style="display: block;">
+                        <img src="../pic/勾选.png" id = "gxcheckimg" style="display: none;">
+                    </div>
+                    <span class="remember1">记住我</span>
+                    <center><button type="button" class="btnInput" id = "BtnInput">登陆</button></center>
+                </form>
+                <div class="eye" id="Eye">
+                    <img src="../pic/密文显示.png" id = "eyemi" style="display: block;" >
+					<img src="../pic/明文显示.png" id = "eyeming" style="display: none;" >
+               <!-- http://127.0.0.1:5500/charge/charge/pic/%E5%AF%86%E6%96%87%E6%98%BE%E7%A4%BA.png -->
+				</div>
+            </div>
+    </div>
+  <script src="../js/register.js"></script>
+</body>
+</html>
